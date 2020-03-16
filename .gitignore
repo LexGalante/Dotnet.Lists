@@ -3,3 +3,5 @@
 ################################################################################
 
 /.vs/Dotnet.Lists/v16
+/src/Dotnet.Lists.Console/bin/Debug/netcoreapp3.0
+/src/Dotnet.Lists.Console/obj
