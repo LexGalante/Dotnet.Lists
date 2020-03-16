@@ -11,6 +11,7 @@ namespace Dotnet.Lists.Console
             ExampleSortedList();
             ExampleQueue();
             ExampleLinkedList();
+            ExampleStack();
         }
 
         /// <summary>
@@ -116,6 +117,29 @@ namespace Dotnet.Lists.Console
             var pessoaDequeue = pessoas.Dequeue();
             System.Console.WriteLine("DEQUEUE - Metodo que remove o primeiro item da QUEUE");
             System.Console.WriteLine($"{pessoaDequeue.Nome} - {pessoaDequeue.Idade} - {pessoas.Count}");
+
+            System.Console.WriteLine($"------------------------------------------------{Environment.NewLine}");
+        }
+
+        /// <summary>
+        /// Implementa de stack first in first out
+        /// </summary>
+        private static void ExampleStack()
+        {
+            System.Console.WriteLine($"------------------------------------------------{Environment.NewLine}");
+            System.Console.WriteLine("Exemplo de lista do tipo Stack");
+
+            var pessoas = new Stack<Pessoa>();
+            System.Console.WriteLine($"Adicionando Items a stack atraves metodo PUSH");
+            pessoas.Push(new Pessoa() { Nome = "Fulano", Idade = 12 });
+            pessoas.Push(new Pessoa() { Nome = "Ciclano", Idade = 24 });
+            pessoas.Push(new Pessoa() { Nome = "Pafuncio", Idade = 36 });
+            System.Console.WriteLine($"Metodo pop retorna o primeiro registro");
+            var pessoa = pessoas.Pop();
+            System.Console.WriteLine($"{pessoa.Nome} - {pessoa.Idade}");
+            System.Console.WriteLine($"Visualizando o registro da vez");
+            var pessoaAtual = pessoas.Peek();
+            System.Console.WriteLine($"{pessoaAtual.Nome} - {pessoaAtual.Idade}");
 
             System.Console.WriteLine($"------------------------------------------------{Environment.NewLine}");
         }
